@@ -14,7 +14,7 @@ To be able to make many mini audio visualizations of the 911 calls, which would 
 Added multiple audio files, got rid of buttons for pause and volume toggle, added HTML audio bar, made visual changes.
 
 #### Issue
-The way the code is structured now makes it unable to handle multiple audio files. Only the visualization for the last audio file gets rendered. If you comment line 47 of `app.js` back in, you'll see that `renderChart()` gets stuck in a loop on the last audio file. Line 48, which calls `renderChart()` recursively with `window.requestAnimationFrame`, is where the issue lies.
+The way the code is structured now makes it unable to handle multiple audio files. Only the visualization for the last audio file gets rendered. If you comment line 47 of `app.js` back in, you'll see that `renderChart()` gets stuck in a loop on the last audio file. Line 48, which calls `renderChart()` recursively with `window.requestAnimationFrame()`, is where the issue lies.
 
 #### Other options
 - [Audiogram](https://github.com/nypublicradio/audiogram) -- converts audio to video
